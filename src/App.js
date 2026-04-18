@@ -65,7 +65,7 @@ function ScoreRing({ score, size = 130 }) {
   const R = size * 0.415;
   const C = 2 * Math.PI * R;
   const pct = clamp(score, 0, 1);
-  const { label, color } = getScoreLabel(score);
+  const { color } = getScoreLabel(score);
   return (
     <div className="score-ring" style={{ width: size, height: size }}>
       <svg viewBox={`0 0 ${size} ${size}`} width={size} height={size}>
@@ -230,6 +230,7 @@ function MiniBar({ value, color, label, pct }) {
 }
 
 /* ── ADMET Phase Card ────────────────────────────────────────── */
+/* eslint-disable no-unused-vars */
 function AdmetCard({ icon, title, score, color, children }) {
   return (
     <div className="admet-card" style={{ "--admet-color": color }}>
