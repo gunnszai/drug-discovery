@@ -1,0 +1,103 @@
+/* ============================================
+   DRUGSX — GLOBAL DESIGN SYSTEM
+   ============================================ */
+
+:root {
+  /* Colors */
+  --bg-primary: #050510;
+  --bg-secondary: #0b0b1f;
+  --bg-card: rgba(255, 255, 255, 0.04);
+  --bg-card-hover: rgba(255, 255, 255, 0.07);
+  
+  --purple-deep: #4c1d95;
+  --purple-main: #7c3aed;
+  --purple-light: #a78bfa;
+  --purple-glow: rgba(124, 58, 237, 0.35);
+  
+  --cyan-main: #06b6d4;
+  --cyan-light: #67e8f9;
+  --cyan-glow: rgba(6, 182, 212, 0.3);
+  
+  --emerald: #10b981;
+  --emerald-glow: rgba(16, 185, 129, 0.3);
+  
+  --red: #ef4444;
+  --amber: #f59e0b;
+  
+  --text-primary: #f1f5f9;
+  --text-secondary: #94a3b8;
+  --text-muted: #475569;
+  
+  --border: rgba(255, 255, 255, 0.08);
+  --border-active: rgba(124, 58, 237, 0.5);
+  
+  /* Typography */
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-display: 'Space Grotesk', 'Inter', sans-serif;
+  
+  /* Spacing */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-full: 9999px;
+  
+  /* Shadows */
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.4);
+  --shadow-md: 0 4px 16px rgba(0,0,0,0.5);
+  --shadow-lg: 0 8px 32px rgba(0,0,0,0.6);
+  --shadow-purple: 0 0 40px rgba(124, 58, 237, 0.25);
+  --shadow-cyan: 0 0 40px rgba(6, 182, 212, 0.2);
+  
+  /* Transitions */
+  --transition-fast: all 0.15s ease;
+  --transition-base: all 0.25s ease;
+  --transition-slow: all 0.4s ease;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg-secondary); }
+::-webkit-scrollbar-thumb { background: var(--purple-main); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--purple-light); }
+
+/* Selection */
+::selection {
+  background: var(--purple-glow);
+  color: var(--purple-light);
+}
+
+/* Focus styles */
+:focus-visible {
+  outline: 2px solid var(--purple-light);
+  outline-offset: 2px;
+}
+
+code {
+  font-family: 'JetBrains Mono', source-code-pro, Menlo, Monaco, Consolas, monospace;
+  background: rgba(124, 58, 237, 0.1);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.875em;
+  color: var(--purple-light);
+}
